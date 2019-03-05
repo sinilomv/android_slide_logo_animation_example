@@ -44,17 +44,17 @@ class StartLogo : AppCompatActivity() {
                     width = (availableWidth - sumaryWidth)/2f
                     newWidth = 0 - width
 
-                val FinderAnimation = TranslateAnimation(350f, newWidth, 0f, 0f)
-                FinderAnimation.duration = 2000
-                FinderAnimation.fillAfter = true
-                FinderAnimation.setAnimationListener(MyAnimationListener())
-                app!!.startAnimation(FinderAnimation)
+                val appAnimation = TranslateAnimation(350f, newWidth, 0f, 0f)
+                appAnimation.duration = 2000
+                appAnimation.fillAfter = true
+                appAnimation.setAnimationListener(MyAnimationListener())
+                app!!.startAnimation(appAnimation)
 
-                val GeoAnimation = TranslateAnimation(-350f, width, 0f, 0f)
-                GeoAnimation.duration = 2000
-                GeoAnimation.fillAfter = true
-                GeoAnimation.setAnimationListener(MyAnimationListener())
-                logo!!.startAnimation(GeoAnimation)
+                val logoAnimation = TranslateAnimation(-350f, width, 0f, 0f)
+                logoAnimation.duration = 2000
+                logoAnimation.fillAfter = true
+                logoAnimation.setAnimationListener(MyAnimationListener())
+                logo!!.startAnimation(logoAnimation)
             }
         })
 
